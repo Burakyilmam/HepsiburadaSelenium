@@ -27,8 +27,7 @@ public class KullaniciKayit {
         WebElement txtUser = driver.findElement(By.cssSelector("input[name='username']"));
         txtUser.sendKeys("deneme@deneme.com");
 
-        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("button[name='btnSignUpSubmit']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("button[name='btnSignUpSubmit']")));
         WebElement RegisterBtn = driver.findElement(By.cssSelector(("button[name='btnSignUpSubmit']")));
         RegisterBtn.click();
     }
