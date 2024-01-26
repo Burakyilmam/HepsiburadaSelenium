@@ -21,8 +21,20 @@ public class DesktopPC {
         WebElement elektronik = driver.findElement(By.xpath("//span[contains(text(), 'Elektronik')]"));
         actions.moveToElement(elektronik).perform();
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         WebElement bilgisayar = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Bilgisayar/Tablet']")));
         actions.moveToElement(bilgisayar).perform();
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         WebElement DesktopPC = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Masaüstü Bilgisayar']")));
         actions.moveToElement(DesktopPC).perform();
